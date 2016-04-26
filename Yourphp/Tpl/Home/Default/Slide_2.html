@@ -1,0 +1,31 @@
+
+<!--banner-->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0"  class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <!--<li data-target="#carousel-example-generic" data-slide-to="3"></li>-->
+          </ol>
+        
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+          	{loop}
+             	<div class="item">
+                  <a href="{$r.link}" target="_blank"><img src="{$r['pic']}" alt="{$r['title']}" ></a>
+                </div>
+            {/loop}
+            
+          </div>
+    </div>
+    <!--banner结束-->
+    <div class="ly"></div>
+  
+  
+  <script>
+  	$(".item:first").addClass("active");
+  </script>
+    
+    

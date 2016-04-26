@@ -1,0 +1,72 @@
+<!--banner-->
+<div class="jumbotron about_bg_fluid">
+  <div class="container">
+    <div class="ly"></div>
+    	{if $_GET[id]==21}
+        <h1>成功合作案例</h1>
+        {else}
+        <h1>创造交给我们，价值留给你们</h1>
+        {/if}
+        <div class="ly2"></div>
+        <p>以技术得人心, 以质量占市场; 以诚信得发展, 以服务赢客户</p>
+    </div>
+</div>
+
+<!--banner end-->
+
+<!--合作案例-->
+<div class="container">
+        <h3>解决方案 <small>聚焦焦点—用事实说话。请欣赏！</small></h3>
+    </div>
+<div class="container-fluid about-bg">
+<div class="ly"></div>
+
+    <div class="container">
+    
+        <div class="row">
+            <volist name="list" id="r">
+                <div class="col-xs-6 col-md-3">
+                  <div class="thumbnail-project"  >
+                    <div class="box1">
+                            <div class="toll_img"><img class="lazy"  data-original="{$r['thumb']|thumb=###,245,190,1}" alt="{$r[title]}"></div>
+                            <div class="toll_info"><a href="{$r.url}"><h3>{$r[title]}<br/><br/><small><button class="btn btn-default" >点击了解详情></button></small></h3></a></div>
+                        </div>
+                  </div>
+                  		
+                	</div>
+            </volist>
+            
+        </div>
+        <div id="pages" class="page">{$pages}</div>
+		<br>
+    </div>
+</div>
+<!--合作案例结束-->
+
+<script>
+$(document).ready(function(){
+  	if({$_GET[id]}==1){
+		$('.tab:first').addClass('on');
+	}else{
+		$('#tab{$_GET[id]}').addClass('on');
+	}
+});
+
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.thumbnail-project .box1').mouseover(function(){
+		$(this).stop().animate({"top":"-190px"}, 200); 
+	})
+	$('.thumbnail-project .box1').mouseout(function(){
+		$(this).stop().animate({"top":"0"}, 200); 
+	})
+})
+</script>
+
+
+
+
+
+

@@ -1,0 +1,83 @@
+<!--banner-->
+<div class="jumbotron about_bg_fluid">
+  <div class="container">
+    <div class="ly"></div>
+    	{if $_GET[id]==21}
+        <h1>成功合作案例</h1>
+        {else}
+        <h1>创造交给我们，价值留给你们</h1>
+        {/if}
+        <div class="ly2"></div>
+        <p>以技术得人心, 以质量占市场; 以诚信得发展, 以服务赢客户</p>
+    </div>
+</div>
+
+<!--banner end-->
+{if $_GET[id]!=22}
+<div class="container-fluid sec">
+    <div class="container">
+        <div class="about-us-tab">
+        
+        <YP:subcat  catid="21">
+          <a href="{$r.url}" class="tab" id="tab{$r.arrchildid}" >{$r.catname}</a>
+        </YP:subcat>
+            
+        </div>
+    </div>
+</div>
+{/if}
+<!--合作案例-->
+<div class="container-fluid about-bg">
+<div class="ly"></div>
+
+    <div class="container">
+        <div class="row">
+            <volist name="list" id="r">
+                <div class="col-xs-6 col-md-3 ">
+              <div class="thumbnail"  >
+                
+                  {if $_GET[id]!=22}
+                  <img class="lazy"  data-original="{$r['thumb']|thumb=###,300,250,1}" alt="{$r[title]}">
+                <div class="caption">
+                  <h3>
+                    {$r[title]|str_cut=###,50}<br>
+                  </h3>
+                  {else}
+                  <a href="{$r.url}" title="{$r[title]}" target="_blank" ><img class="lazy"  data-original="{$r['thumb']|thumb=###,300,250,1}" alt="{$r[title]}"></a>
+                <div class="caption">
+                  <h3>
+                    <a href="{$r.url}" title="{$r[title]}" target="_blank" >{$r[title]|str_cut=###,50}<br></a>
+                  </h3>
+                  {/if}
+                  
+                  <p>
+                  {$r.description|str_cut=###,130}
+                  </p>
+                </div>
+              </div>
+            </div>
+            </volist>
+            
+        </div>
+        <div id="pages" class="page">{$pages}</div>
+		<br>
+    </div>
+</div>
+<!--合作案例结束-->
+
+<script>
+$(document).ready(function(){
+  	if({$_GET[id]}==1){
+		$('.tab:first').addClass('on');
+	}else{
+		$('#tab{$_GET[id]}').addClass('on');
+	}
+});
+
+</script>
+
+
+
+
+
+

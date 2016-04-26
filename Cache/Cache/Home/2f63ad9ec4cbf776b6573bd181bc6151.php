@@ -1,0 +1,26 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="keywords" content="<?php echo ($seo_keywords); ?>" /><meta name="description" content="<?php echo ($seo_description); ?>" /><meta name="robots" content="index, follow" /><meta name="Copyright" content="Copyright (c) HuangShaoping" /><meta name="author" content="<?php echo ($site_name); ?>--HuangShaoping"><title><?php echo ($seo_title); ?>-<?php echo ($site_name); ?></title><link rel="stylesheet" href="../Public/css/bootstrap.min.css"><link href="../Public/css/style.css" rel="stylesheet" type="text/css"><script src="../Public/js/jquery.min.js"></script><script src="../Public/js/bootstrap.min.js"></script><script src="../Public/js/jquery.lazyload.js"></script><link rel="shortcut icon" href="/favicon.png"><!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --><!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script><![endif]--></head><body><!--头部--><!--
+    <div class="container top"><div class="row"><div class="col-xs-12 col-sm-4 col-md-4"><div class="logo"><a href="/" style="float:left"><img src="../Public/images/logo.png" alt="思远高创" title="思远高创" width="212" height="47"></a></div></div><div class="col-xs-12 col-sm-8 col-md-8"><div class="top_rgt"></div></div></div></div>
+    --><!--头部结束--><nav id="navbar-example" class="navbar navbar-default navbar-static"><div class="container top"><div class="navbar-header"><button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#"><img src="../Public/images/logo.png"  alt="思远高创" title="思远高创" class="logo-img" ></a></div><div class="navbar-collapse bs-example-js-navbar-collapse collapse" aria-expanded="false" style="height: 1px;"><ul class="nav navbar-nav navbar-right"><li id="nav_0"><a href="/www/PINGPHP/" title="首页" >首页</a></li><li id="nav_20" class="first file"><a href="/www/PINGPHP/index.php?m=Page&a=index&id=20" title="服务">服务</a></li><li id="nav_21" class="folder"><a href="/www/PINGPHP/index.php?m=Article&a=index&id=21" title="案例">案例</a></li><li id="nav_22" class="file"><a href="/www/PINGPHP/index.php?m=Article&a=index&id=22" title="方案">方案</a></li><li id="nav_1" class="folder"><a href="/www/PINGPHP/index.php?m=Article&a=index&id=1" title="资讯">资讯</a></li><li id="nav_8" class="foot folder"><a href="/www/PINGPHP/index.php?m=Page&a=index&id=8" title="关于">关于</a></li></ul></div><!-- /.nav-collapse --></div><!-- /.container-fluid --></nav><!--头部结束--><style type="text/css">
+@media (min-width:768px) {
+.article-content {
+	padding-right: 0;
+	padding-left: 0;
+	margin-right: auto;
+	margin-left: auto;
+	padding:30px;
+}
+
+}
+
+
+
+</style><!--banner--><div class="jumbotron about_bg_fluid"><div class="container"><div class="ly"></div><h1>思远高创: 可能是最好的APP开发公司</h1><div class="ly2"></div><p>以技术得人心, 以质量占市场; 以诚信得发展, 以服务赢客户</p></div></div><!--banner end--><!--content--><div class="container-fluid about-bg"><div class="article-content"><section><h3><center><?php echo ($title); ?></center></h3><div class="ly2"></div><div class="content"><?php echo ($content); ?></div><div id="pages" class="page"><?php echo ($pages); ?></div></section><div><div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a></div><script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"<?php echo ($title); ?>","bdMini":"2","bdMiniList":false,"bdPic":"http://sygcsoft.com/Yourphp/Tpl/Home/Default/Public/images/logo.png","bdStyle":"1","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script></div></div></div><!--content end--><script language="JavaScript" src="{:URL('Home-'.$module.'/hits?id='.$id)}"></script><script>
+$(document).ready(function(){
+  	$('.content img').addClass('img-responsive');
+});
+
+</script><!--底部--><div class="footer">© 2008-2016 北京思远高创信息技术有限公司版权所有 京ICP备12033387号</div><!--底部结束--><script>
+	$("img.lazy").lazyload({
+    effect : "fadeIn"
+});
+	</script></body></html>

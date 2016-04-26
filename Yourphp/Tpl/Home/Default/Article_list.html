@@ -1,0 +1,61 @@
+<style type="text/css">
+.article-list {
+	padding-right: 0;
+	padding-left: 0;
+	margin-right: auto;
+	margin-left: auto
+}
+
+
+</style>
+
+<!--banner-->
+
+<div class="jumbotron about_bg_fluid">
+  <div class="container">
+    <div class="ly"></div>
+    <h1>资讯</h1>
+    <div class="ly2"></div>
+    <p>以技术得人心, 以质量占市场; 以诚信得发展, 以服务赢客户</p>
+  </div>
+</div>
+<!--banner end--> 
+<div class="container-fluid sec">
+    <div class="container">
+        <div class="about-us-tab">
+        
+        <YP:subcat  catid="1">
+          <a href="{$r.url}" class="tab" id="tab{$r.arrchildid}" >{$r.catname}</a>
+        </YP:subcat>
+            
+        </div>
+    </div>
+</div>
+<!--news-->
+<div class="container-fluid about-bg">
+  <div class="ly"></div>
+  <div class="container article-list">
+    <volist name="list" id="r">
+      <div class="item">
+        <div class="row">
+          <div class="col-md-9 col-sm-9 col-xs-9"> <a class="subtitle" href="{$r.url}" title=" {$r.title}" target="_blank"> {$r.title}</a>
+            <div class="desc  hidden-xs"> {$r.description|str_cut=###,180} </div>
+            <div class="all">  <img src="../Public/images/time.png" class="time"><span class="date">{$r.createtime|toDate}</span> <!--<span class="article-tag hidden-xs"> <img src="../Public/images/tags.png" class="tagimg"></span> <span class="tag"> {$r.keywords|str_cut=###,60}</span> -->
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3 col-xs-3 text-right"> <a href="{$r.url}" class="img-wrap" target="_blank"> <img class="lazy img-responsive"  data-original="{$r['thumb']|thumb=###,248,153,1}" alt="{$r[title]}" alt="{$r.title}"> </a> </div>
+        </div>
+      </div>
+    </volist>
+    <div id="pages" class="page">{$pages}</div>
+  </div>
+</div>  
+  
+<!--news结束-->
+<script>
+$(document).ready(function(){
+  	$('#tab{$_GET[id]}').addClass('on');
+});
+
+</script> 
+

@@ -1,0 +1,53 @@
+
+<!--banner-->
+<div class="jumbotron about_bg_fluid">
+    <div class="container">
+    <div class="ly"></div>
+    	{if $_GET[id]==20}
+        <h1>思远高创: 可能是最好的APP开发公司</h1>
+        {else}
+        <h1>了解思远高创, 一起创造未来</h1>
+        {/if}
+        
+        <div class="ly2"></div>
+        <p>以技术得人心, 以质量占市场; 以诚信得发展, 以服务赢客户</p>
+    </div>
+</div>
+<!--banner end-->
+<!--content-->
+{if $_GET[id]!=20}
+<div class="container-fluid sec">
+    <div class="container">
+        <div class="about-us-tab">
+        
+        <YP:subcat  catid="8">
+          <a href="{$r.url}" class="tab" id="tab{$r.arrchildid}" >{$r.catname}</a>
+        </YP:subcat>
+            
+        </div>
+    </div>
+</div>   
+{/if}
+<div class="container-fluid about-bg">
+    <div class="container">
+        	<section class="about-content">
+            <center><h3>{$title}</h3></center>
+            <div class="content">{$content}</div>
+            </section>
+    </div>
+</div>
+<!--content end-->
+<script>
+$(document).ready(function(){
+  	if({$_GET[id]}==8){
+		$('.tab:first').addClass('on');
+	}else{
+		$('#tab{$_GET[id]}').addClass('on');
+	}
+});
+
+$(document).ready(function(){
+  	$('.content img').addClass('img-responsive');
+});
+
+</script>

@@ -1,0 +1,2 @@
+<?php
+return array ( 'services' => '20', 'gongsi' => '3', 'zixun' => '10', 'health' => '23', 'info' => '11', 'contactus' => '12', 'p2p' => '24', 'case' => '21', 'project' => '22', 'news' => '1', 'about' => '8', ); ?>
